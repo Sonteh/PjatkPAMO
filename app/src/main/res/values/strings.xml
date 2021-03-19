@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PjatkPAMO</string>
+    <string name="bmi">BMI</string>
+    <string name="heigth_in_cm">Heigth (in cm)</string>
+    <string name="weight_in_kg">Weight (in kg)</string>
+    <string name="calculate">Calculate</string>
+    <string name="Underweight">Underweight</string>
+    <string name="Optimum">Optimum</string>
+    <string name="Overweight">Overweight</string>
+    <string name="Obesity">Obesity</string>
 </resources>

@@ -3,7 +3,6 @@ package com.example.pjatkpamo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,10 +11,10 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextHeigth;
-    private EditText editTextWeigth;
-    private Button buttonCalculate;
+    private EditText editTextHeight;
+    private EditText editTextWeight;
     private TextView textViewCalculate;
+    private TextView textViewCalcultedOpinion;
     private double Bmi;
     private String formatedBmi;
 
@@ -24,26 +23,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextHeigth = findViewById(R.id.editTextHeigth);
-        editTextWeigth = findViewById(R.id.editTextWeight);
-        buttonCalculate = findViewById(R.id.buttonCalculate);
+        editTextHeight = findViewById(R.id.editTextHeigth);
+        editTextWeight = findViewById(R.id.editTextWeight);
         textViewCalculate = findViewById(R.id.textViewCalculate);
+        textViewCalcultedOpinion = findViewById(R.id.textViewCalculatedOpinion);
 
-        buttonCalculate.setOnClickListener(new View.OnClickListener() {
+        Button buttonCalculate = findViewById(R.id.buttonCalculate);
 
-            public void onClick(View view){
-                double height = Double.parseDouble(editTextHeigth.getText().toString());
-                double weight = Double.parseDouble(editTextWeigth.getText().toString());
+        buttonCalculate.setOnClickListener(view -> {
+            double height = Double.parseDouble(editTextHeight.getText().toString());
+            double weight = Double.parseDouble(editTextWeight.getText().toString());
 
-                height = height / 100;
+            height = height / 100;
 
-                Bmi =  weight / (Math.pow(height, 2));
+            Bmi =  weight / (Math.pow(height, 2));
 
-                DecimalFormat decimalFormat = new DecimalFormat("#.##");
-                formatedBmi = decimalFormat.format(Bmi);
+            DecimalFormat decimalFormat = new DecimalFormat("#.##");
+            formatedBmi = decimalFormat.format(Bmi);
 
-                textViewCalculate.setText(formatedBmi);
+            textViewCalculate.setText(formatedBmi);
+
+            if(Bmi < 18.5f)
+            { ;
+                textViewCalcultedOpinion.setText(R.string.Underweight);
             }
+            else if(Bmi >= 18.5f && Bmi < 25.0f)
+            {
+                textViewCalcultedOpinion.setText(R.string.Optimum);
+            }
+            else if(Bmi >= 25.0f && Bmi < 30.0f)
+            {
+                textViewCalcultedOpinion.setText(R.string.Overweight);
+            }
+            else
+            {
+                textViewCalcultedOpinion.setText(R.string.Obesity);
+            }
+
         });
     }
 }

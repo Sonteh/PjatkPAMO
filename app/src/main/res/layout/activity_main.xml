@@ -15,54 +15,71 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:text="BMI"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:text="@string/bmi"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewHeight"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="Heigth (in cm)"
+            android:layout_height="wrap_content"
+            android:text="@string/heigth_in_cm"
             android:textAlignment="textStart"
-            android:textColor="#000000"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/editTextHeigth"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="50dp"
             android:ems="10"
             android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/textViewWeight"
             android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:text="Weight (in kg)" />
+            android:layout_height="wrap_content"
+            android:text="@string/weight_in_kg"
+            android:textAlignment="textStart"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/editTextWeight"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="50dp"
             android:ems="10"
             android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/buttonCalculate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="64dp"
+            android:text="@string/calculate"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/textViewCalculate"
             android:layout_width="match_parent"
             android:layout_height="49dp"
-            android:text="TextView" />
+            android:text=""
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/purple_500"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCalculatedOpinion"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text=""
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/purple_500"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
