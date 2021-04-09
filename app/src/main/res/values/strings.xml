@@ -8,4 +8,41 @@
     <string name="Optimum">Optimum</string>
     <string name="Overweight">Overweight</string>
     <string name="Obesity">Obesity</string>
+    <string name="Calculator_BMI">Calculator BMI</string>
+    <string name="Man">Man</string>
+    <string name="Woman">Woman</string>
+    <string name="Age">Age</string>
+    <string name="Recipe">Recipe</string>
+    <string name="recpie1"><b><big>Ingredients</big></b>
+            \n<li>2 heads of romaine lettuce</li>
+            \n<li>2 avocados</li>
+            \n<li>2 medium sized carrots</li>
+            \n<li>1 cup of cherry tomatoes</li>
+            \n<li>1/2 cup of sweetcorn</li>
+            \n<li>2 spring onions</li>
+            \n<li>1/3 cup of grated red cabbage</li>
+        \n<b>Roasted Chickpeas</b>
+            \n<li>1 can of chickpeas</li>
+            \n<li>1/3 cup of tomato puree</li>
+            \n<li>1 tbsp of vegan Worcester sauce</li>
+            \n<li>1 tsp of onion powder</li>
+            \n<li>1 tsp of maple syrup</li>
+            \n<li>1 tsp of liquid smoke</li>
+            \n<li>1 tsp of olive oil</li>
+        \n<b>Grilled vegan seitan chicken</b>
+            \n<li>2 cups of vital wheat gluten</li>
+            \n<li>1 tsp of onion powder</li>
+            \n<li>1 tsp of garlic powder</li>
+            \n<li>1 no chicken bouillon cube</li>
+            \n<li>1 tbsp of vegan Worcester sauce</li>
+            \n<li>1 cup of silken tofu</li>
+            \n<li>1 tbsp of vegan chicken seasoning</li>
+        \n<b>Vegan ranch dressing</b>
+            \n<li>1/2 cup of vegan mayo</li>
+            \n<li>1 tsp of dried dill</li>
+            \n<li>1 tbsp of chopped fresh chives</li>
+            \n<li>2 tbsp of apple cider vinegar</li>
+            \n<li>1/3 cup of oat or soya milk" </li>
+    </string>
+
 </resources>
