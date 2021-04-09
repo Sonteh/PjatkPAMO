@@ -1,19 +1,22 @@
 <resources>
     <string name="app_name">PjatkPAMO</string>
     <string name="bmi">BMI</string>
-    <string name="heigth_in_cm">Heigth (in cm)</string>
+    <string name="heigth_in_cm">Height (in cm)</string>
     <string name="weight_in_kg">Weight (in kg)</string>
     <string name="calculate">Calculate</string>
     <string name="Underweight">Underweight</string>
     <string name="Optimum">Optimum</string>
     <string name="Overweight">Overweight</string>
     <string name="Obesity">Obesity</string>
-    <string name="Calculator_BMI">Calculator BMI</string>
+    <string name="Start">Start</string>
     <string name="Man">Man</string>
     <string name="Woman">Woman</string>
     <string name="Age">Age</string>
     <string name="Recipe">Recipe</string>
-    <string name="recpie1"><b><big>Ingredients</big></b>
+    <string name="recipe_high_calories">
+        <b><big>Vegan Cobb Salad Recipe</big></b>
+        \n<b>1003 Calories</b>
+        \n<b>Ingredients</b>
             \n<li>2 heads of romaine lettuce</li>
             \n<li>2 avocados</li>
             \n<li>2 medium sized carrots</li>
@@ -43,6 +46,22 @@
             \n<li>1 tbsp of chopped fresh chives</li>
             \n<li>2 tbsp of apple cider vinegar</li>
             \n<li>1/3 cup of oat or soya milk" </li>
+    </string>
+    <string name="recipe_low_calories">
+        <b><big>Easy chicken mole</big></b>
+        \n<b>243 Calories</b>
+        \n<b>Ingredients</b>
+            \n<li>red onion 2, 1 chopped, 1 sliced into rings</li>
+            \n<li>garlic 2 cloves, crushed</li>
+            \n<li>olive oil</li>
+            \n<li>chicken thighs 6 skinless, cut into strips</li>
+            \n<li>chopped tomatoes 400 tin</li>
+            \n<li>chicken stock 500ml</li>
+            \n<li>Willies Mexican mole cacao 1/4 block</li>
+            \n<li>chilli powder a pinch</li>
+            \n<li>coriander a small bunch, leaves picked</li>
+            \n<li>cooked rice to serve</li>
+            \n<li>lime wedges to serve</li>
     </string>
 
 </resources>

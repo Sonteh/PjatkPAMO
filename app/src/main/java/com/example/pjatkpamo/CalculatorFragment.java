@@ -160,7 +160,7 @@ public class CalculatorFragment extends Fragment {
             return;
         }
 
-        calories = (655.1f + 9.567 * weight + 1.85 * height - 4.68 * age);
+        calories = (655.1f + 9.567f * weight + 1.85f * height - 4.68f * age);
         textViewCalories.setText(Formatter(calories));
     }
 }

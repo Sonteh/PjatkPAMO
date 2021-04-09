@@ -27,10 +27,12 @@ public class RecipeFragment extends Fragment {
 
                 TextView textViewRecipe = view.findViewById(R.id.textViewRecipe);
 
-                if(result >= 18.5f && result < 25.0f)
+                if(result < 25.0f)
                 {
-                    textViewRecipe.setText(R.string.recpie1);
+                    textViewRecipe.setText(R.string.recipe_high_calories);
+                    return;
                 }
+                textViewRecipe.setText(R.string.recipe_low_calories);
 
             }
         });
