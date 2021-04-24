@@ -50,5 +50,9 @@
         android:id="@+id/covid_Quiz_Fragment"
         android:name="com.example.pjatkpamo.CovidQuizFragment"
         android:label="fragment_covid__quiz_"
-        tools:layout="@layout/fragment_covid_quiz" />
+        tools:layout="@layout/fragment_covid_quiz" >
+        <action
+            android:id="@+id/action_covid_Quiz_Fragment_to_startingFragment"
+            app:destination="@id/startingFragment" />
+    </fragment>
 </navigation>
