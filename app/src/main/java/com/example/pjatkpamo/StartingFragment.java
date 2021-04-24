@@ -21,9 +21,19 @@ public class StartingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_starting, container, false);
 
         Button calculatorBmi = view.findViewById(R.id.Calculator_BMI_button);
+        Button covidGraph = view.findViewById(R.id.Covid_Graph_button);
+        Button covidQuiz = view.findViewById(R.id.Covid_Quiz_button);
 
         calculatorBmi.setOnClickListener(bmi -> {
             Navigation.findNavController(view).navigate(R.id.action_startingFragment_to_calculatorFragment);
+        });
+
+        covidGraph.setOnClickListener(graph -> {
+            Navigation.findNavController(view).navigate(R.id.action_startingFragment_to_covidGraphFragment);
+        });
+
+        covidQuiz.setOnClickListener(quiz -> {
+            Navigation.findNavController(view).navigate(R.id.action_startingFragment_to_covid_Quiz_Fragment);
         });
 
         return view;

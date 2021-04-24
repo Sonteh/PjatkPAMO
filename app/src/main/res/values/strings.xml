@@ -63,5 +63,9 @@
             \n<li>cooked rice to serve</li>
             \n<li>lime wedges to serve</li>
     </string>
+    <string name="covid_graph">COVID Graph</string>
+    <string name="covid_quiz">COVID Quiz</string>
+    <string name="hello_blank_fragment">Hello graph fragment</string>
+    <string name="hello_blank_fragment2">Hello quiz fragment</string>
 
 </resources>

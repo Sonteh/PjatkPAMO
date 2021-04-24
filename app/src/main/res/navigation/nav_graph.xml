@@ -16,6 +16,12 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_startingFragment_to_covidGraphFragment"
+            app:destination="@id/covidGraphFragment" />
+        <action
+            android:id="@+id/action_startingFragment_to_covid_Quiz_Fragment"
+            app:destination="@id/covid_Quiz_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/calculatorFragment"
@@ -35,4 +41,14 @@
         android:name="com.example.pjatkpamo.RecipeFragment"
         android:label="fragment_recipe"
         tools:layout="@layout/fragment_recipe" />
+    <fragment
+        android:id="@+id/covidGraphFragment"
+        android:name="com.example.pjatkpamo.CovidGraphFragment"
+        android:label="fragment_covid_graph"
+        tools:layout="@layout/fragment_covid_graph" />
+    <fragment
+        android:id="@+id/covid_Quiz_Fragment"
+        android:name="com.example.pjatkpamo.CovidQuizFragment"
+        android:label="fragment_covid__quiz_"
+        tools:layout="@layout/fragment_covid_quiz" />
 </navigation>
