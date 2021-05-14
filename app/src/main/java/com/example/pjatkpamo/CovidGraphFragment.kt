@@ -6,52 +6,60 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.github.mikephil.charting.charts.BarChart
+import com.github.mikephil.charting.components.AxisBase
+import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.formatter.IAxisValueFormatter
+import com.github.mikephil.charting.formatter.ValueFormatter
+import com.github.mikephil.charting.utils.ColorTemplate
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CovidGraphFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+import android.renderscript.Sampler
+import android.graphics.Color
+
+
 class CovidGraphFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_covid_graph, container, false)
-    }
+                              savedInstanceState: Bundle?): View {
+        val view: View = inflater.inflate(R.layout.fragment_covid_graph, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CovidGraphFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-                CovidGraphFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
-                }
+        val barChart: BarChart = view.findViewById(R.id.barChart)
+
+        val xLabel: ArrayList<String> = ArrayList()
+        xLabel.add("USA")
+        xLabel.add("India")
+        xLabel.add("Germany")
+        xLabel.add("Poland")
+
+        val covid: MutableList<BarEntry> = ArrayList()
+        covid.add(BarEntry(0f, 32185302f))
+        covid.add(BarEntry(1f, 16263695f))
+        covid.add(BarEntry(2f, 3180810f))
+        covid.add(BarEntry(3f, 2751632f))
+
+        val barDataSet = BarDataSet(covid, "Covid cases")
+        barDataSet.setColors(*ColorTemplate.MATERIAL_COLORS)
+        barDataSet.valueTextColor = Color.BLACK
+        barDataSet.valueTextSize = 16f
+
+        val barData = BarData(barDataSet);
+
+        val xAxis: XAxis = barChart.xAxis
+        xAxis.position = XAxis.XAxisPosition.BOTTOM
+        xAxis.setDrawGridLines(false)
+        xAxis.granularity = 1f
+        //xAxis.setValueFormatter(ValueFormatter() {
+
+
+        barChart.setFitBars(true)
+        barChart.data = barData
+        barChart.description.text = "Covid"
+        barChart.animateY(2000)
+        barChart.invalidate()
+
+        return view
     }
 }

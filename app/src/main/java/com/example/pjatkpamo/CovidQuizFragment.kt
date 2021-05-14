@@ -1,15 +1,8 @@
 package com.example.pjatkpamo
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -34,16 +27,12 @@ class CovidQuizFragment : Fragment() {
     private var Score: Int = 0
     private val QuestionLength: Int = Questions.Questions.size
 
-    var r: Int? = null
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
         val view: View = inflater.inflate(R.layout.fragment_covid_quiz, container, false);
-
-        //r = (0..QuestionLength).random()
 
         answer1 = view.findViewById(R.id.answer1)
         answer2 = view.findViewById(R.id.answer2)
