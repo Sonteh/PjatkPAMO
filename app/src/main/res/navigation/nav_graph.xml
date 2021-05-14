@@ -23,7 +23,11 @@
         android:id="@+id/covidQuizFragment"
         android:name="com.example.pjatkpamo.CovidQuizFragment"
         android:label="fragment_covid_quiz"
-        tools:layout="@layout/fragment_covid_quiz" />
+        tools:layout="@layout/fragment_covid_quiz" >
+        <action
+            android:id="@+id/action_covidQuizFragment_to_startingFragment"
+            app:destination="@id/startingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/recipeFragment"
         android:name="com.example.pjatkpamo.RecipeFragment"
