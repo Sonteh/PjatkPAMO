@@ -7,16 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.github.mikephil.charting.charts.BarChart
-import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.formatter.IAxisValueFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 
-import android.renderscript.Sampler
 import android.graphics.Color
 
 
@@ -51,8 +48,11 @@ class CovidGraphFragment : Fragment() {
         xAxis.position = XAxis.XAxisPosition.BOTTOM
         xAxis.setDrawGridLines(false)
         xAxis.granularity = 1f
-        //xAxis.setValueFormatter(ValueFormatter() {
-
+        xAxis.valueFormatter = object: ValueFormatter() {
+            override fun getFormattedValue(value: Float): String {
+                return xLabel[value.toInt()]
+            }
+        }
 
         barChart.setFitBars(true)
         barChart.data = barData
