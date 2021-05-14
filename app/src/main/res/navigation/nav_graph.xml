@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startingFragment">
+
+    <fragment
+        android:id="@+id/covidGraphFragment"
+        android:name="com.example.pjatkpamo.CovidGraphFragment"
+        android:label="fragment_covid_graph"
+        tools:layout="@layout/fragment_covid_graph" />
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.pjatkpamo.CalculatorFragment"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" >
+        <action
+            android:id="@+id/action_calculatorFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/covidQuizFragment"
+        android:name="com.example.pjatkpamo.CovidQuizFragment"
+        android:label="fragment_covid_quiz"
+        tools:layout="@layout/fragment_covid_quiz" />
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.pjatkpamo.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" />
+    <fragment
+        android:id="@+id/startingFragment"
+        android:name="com.example.pjatkpamo.StartingFragment"
+        android:label="fragment_starting"
+        tools:layout="@layout/fragment_starting" >
+        <action
+            android:id="@+id/action_startingFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/action_startingFragment_to_covidQuizFragment"
+            app:destination="@id/covidQuizFragment" />
+        <action
+            android:id="@+id/action_startingFragment_to_covidGraphFragment"
+            app:destination="@id/covidGraphFragment" />
+    </fragment>
+</navigation>
